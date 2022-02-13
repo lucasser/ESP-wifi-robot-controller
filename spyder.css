@@ -1,0 +1,15 @@
+body {
+    background:rgb(187, 198, 245);
+  }
+  .tab {
+    text-align: center;
+    font-size: 24px;
+    background-color: white;
+  }
+  .sel {
+    color: white;
+    background-color: purple;
+  }
+  td {
+    display: table-cell;
+  }
