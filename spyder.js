@@ -1,24 +1,10 @@
-function formSubmit(event) {
-    var url = "./cmd";
-    var request = new XMLHttpRequest();
-    request.open('POST', url, true);
-    request.onload = function() { // request successful
-    // we can use server response to our request now
-      console.log(request.responseText);
-    };
-
-    request.onerror = function() {
-      // request failed
-    };
-
-    request.send(new FormData(event.target)); // create FormData from form that triggered event
-    event.preventDefault();
-  }
-
-  // and you can attach form submit event like this for example
-  function attachFormSubmitEvent(formId){
-    document.getElementById(cmd).addEventListener("submit", formSubmit);
-  }
+function send(id){
+  var ajax = new XMLHttpRequest();
+  var data = document.getElementById(id);
+  var formdata = new FormData(data);
+  ajax.open("POST", "/cmd", true);
+  ajax.send(formdata);
+}
   var curWin
   function select(n) {
     switch (n){
