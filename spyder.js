@@ -2,7 +2,7 @@ function send(id){
   var ajax = new XMLHttpRequest();
   var data = document.getElementById(id);
   var formdata = new FormData(data);
-  ajax.open("POST", "/cmd", true);
+  ajax.open("POST", "./cmd", true);
   ajax.send(formdata);
 }
   var curWin
